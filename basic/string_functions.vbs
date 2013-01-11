@@ -23,10 +23,39 @@ WScript.Echo("Right(" & str & ", 2) => " & Right(str, 2))
 
 ' Other functions
 
+' Join(list[, delimiter])
+Dim array(2)
+Dim str_join
+array(0) = "One"
+array(1) = "Two"
+array(2) = "Three"
+WScript.Echo("Join(array) => " & Join(array))
+WScript.Echo("Join(array, ,) => " & Join(array, ","))
+
 ' Len(str) returns str length
 WScript.Echo("String " & str & " has " & Len(str) & " chars. (Len(" & str & ") => " & Len(str) & ")")
 
 ' Search functions
+Dim str2
+str2 = "OneTwoThreeTwoOne"
 
 ' InStr
-WScript.Echo()
+WScript.Echo("InStr(" & str2 & ", Two) => " & InStr(str2, "Two"))
+WScript.Echo("InStr(6, " & str2 & ", Two) => " & InStr(6, str2, "Two"))
+
+' InStrRev
+WScript.Echo("InStrRev(" & str2 & ", Two) => " & InStrRev(str2, "Two"))
+WScript.Echo("InStrRev(" & str2 & ", Two, 6) => " & InStrRev(str2, "Two", 6))
+
+' Trim functions
+Dim str_with_spaces 
+str_with_spaces = "  2 spaces before, 2 spaces after  "
+
+' LTrim(str_with_spaces)
+WScript.Echo("LTrim(" & str_with_spaces & ") => |" & LTrim(str_with_spaces) & "|")
+
+' RTrim(str_with_spaces)
+WScript.Echo("RTrim(" & str_with_spaces & ") => |" & RTrim(str_with_spaces) & "|")
+
+' Trim(str_with_spaces)
+WScript.Echo("Trim(" & str_with_spaces & ") => |" & Trim(str_with_spaces) & "|")

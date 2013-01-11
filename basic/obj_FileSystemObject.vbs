@@ -20,5 +20,5 @@ End If
 If (fso.FileExists(file)) Then
 	WScript.Echo("File " & file & " already exists.")
 Else
-	Set folder = fso.CreateTextFile(file)
+	Set file = fso.CreateTextFile(file)
 End If

@@ -2,6 +2,8 @@
 ' VBS String functions demo
 '
 
+Option Explicit
+
 Dim str 
 str = "ABCdef"
 
@@ -33,6 +35,18 @@ WScript.Echo("Mid(" & str & ", 4) => " & Mid(str, 4))
 '
 ' Other functions
 '
+
+' Chr(n)
+
+Dim Special_Chars
+'Special_Chars(0) = 34
+'Special_Chars(1) = 65
+Special_Chars = Array(34,65)
+
+Dim i
+For i = 0 To UBound(Special_Chars)
+	WScript.Echo("Chr(" & Special_Chars(i) & ") => " & Chr(Special_Chars(i)))
+Next
 
 ' Join(list[, delimiter])
 Dim array(2)

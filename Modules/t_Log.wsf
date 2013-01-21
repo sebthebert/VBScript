@@ -1,0 +1,5 @@
+<job id="t_Filesystem">
+	<script language="VBScript" src="DatetimeISO.vbs" />
+	<script language="VBScript" src="Log.vbs" />
+	<script language="VBScript" src="t_Log.vbs" />
+</job>
